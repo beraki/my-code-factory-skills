@@ -40,4 +40,10 @@ Edits commit messages, PR text, docs, and other prose a person will read.
 
 ## Source
 
-This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, `greploop`, `greploop-apps`, and `unslop` are unchanged, including their licenses and scripts. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch, review, and no-merge workflow.
+This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, `greploop`, `greploop-apps`, and `unslop` are unchanged, including their licenses and scripts. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch and ship workflow.
+
+Every pull request uses `gh pr create --base main`. Never `--base integration`. There is no exception.
+
+If the repo has an integration branch, after the change merge that branch directly into integration. Do not open a pull request for that merge.
+
+The agent never merges the pull request into main. He tests locally and comments on the PR.

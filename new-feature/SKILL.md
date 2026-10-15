@@ -29,13 +29,22 @@ description: Pick up a task, mark a Linear issue In Progress, and branch from th
 
 4. Build by following the code-structure skill (actions own why and when, services own how, extract only after a second caller).
 
-5. When the work is done, open a PR for Beraki to review. He tests locally and leaves comments. The agent never merges, including after Greptile. If the repo has an integration branch used for deployment, the PR base is integration. If it does not, the PR base is main.
+5. When the work is done, open a PR for Beraki to review. Every pull request uses `gh pr create --base main`. Never `--base integration`. There is no exception.
 
    ```bash
-   gh pr create --base integration
+   gh pr create --base main
    ```
 
-   Use `--base main` when the repo has no integration branch used for deployment.
+   The agent never merges the pull request into main. He tests locally and comments on the PR.
+
+   If the repo has an integration branch, after the change merge that branch directly into integration. Do not open a pull request for that merge.
+
+   ```bash
+   git checkout integration
+   git pull
+   git merge <feature-branch>
+   git push
+   ```
 
    The PR body includes a short checklist (what changed, how to test, Linear link if any):
 
@@ -49,4 +58,4 @@ description: Pick up a task, mark a Linear issue In Progress, and branch from th
 
    A UI change requires a screenshot or a video on the PR. Use before-and-after when the proof is a page or element comparison.
 
-6. Greptile (greploop) and unslop still run. They do not grant merge permission. Use greploop-apps when Greptile skips the PR for too many files. A clean Greptile review is not permission to merge.
+6. Greptile (greploop) and unslop still run. They do not grant permission to merge the pull request into main. Use greploop-apps when Greptile skips the PR for too many files. A clean Greptile review is not permission to merge the pull request into main.
