@@ -14,6 +14,10 @@ npx skills add beraki/my-code-factory-skills
 
 Captures before and after screenshots and prints a PR-ready comparison table.
 
+### [caveman](caveman/SKILL.md)
+
+Terse agent output. Answers come first, filler goes, and technical facts stay. Apache-2.0 license in the folder.
+
 ### [code-structure](code-structure/SKILL.md)
 
 Actions own why and when. Services own how. Extract shared logic only after a second caller.
@@ -32,7 +36,7 @@ Edits commit messages, PR text, docs, and other prose a person will read.
 
 ## Source
 
-This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, and `unslop` are unchanged, including their licenses and scripts. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch and ship workflow.
+This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, and `unslop` are unchanged, including their licenses and scripts. `caveman` is vendored from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (`skills/caveman`, Apache-2.0), body unchanged. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch and ship workflow.
 
 Every pull request uses `gh pr create --base main`. Never `--base integration`. There is no exception.
 

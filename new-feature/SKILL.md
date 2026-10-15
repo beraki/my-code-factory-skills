@@ -5,6 +5,8 @@ description: Pick up a task, mark a Linear issue In Progress, and branch from th
 
 # New feature
 
+Caveman is always on for agent replies and for text the agent writes: commit messages, PR bodies, and chat. Apply it to those texts even where the caveman skill says commits and PR bodies stay plain prose.
+
 1. Pick up the task. If it is a Linear issue, mark it In Progress before branching. Example key: BER-12.
 
 2. Pull the latest main. Branch name is `feature/short-description`, or `<LINEAR-KEY>/short-description` when there is a ticket (example: `BER-12/short-description`).

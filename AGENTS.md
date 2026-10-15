@@ -2,6 +2,8 @@
 
 Follow these steps for every task. Drop this file into a repo as `AGENTS.md`.
 
+Caveman is always on for agent replies and for text the agent writes: commit messages, PR bodies, and chat. Apply it to those texts even where the caveman skill says commits and PR bodies stay plain prose.
+
 1. Pick up the task. If it is a Linear issue, mark it In Progress before branching. Example key: BER-12. Use the new-feature skill.
 
 2. Pull the latest main. Branch name is `feature/short-description`, or `<LINEAR-KEY>/short-description` when there is a ticket (example: `BER-12/short-description`).
@@ -60,6 +62,7 @@ Follow these steps for every task. Drop this file into a repo as `AGENTS.md`.
 | Skill | Source |
 |---|---|
 | `new-feature` | this pack, written for Beraki's workflow |
+| `caveman` | this pack, vendored from [JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) `skills/caveman` (Apache-2.0) |
 | `code-structure`, `evidence-driven-testing` | this pack, copied from [michaelshimeles/skills](https://github.com/michaelshimeles/skills) |
 | `before-and-after` | this pack, copied from michaelshimeles/skills, vendored from [vercel-labs/before-and-after](https://github.com/vercel-labs/before-and-after) |
 | `unslop` | this pack, copied from michaelshimeles/skills, vendored from [cursor/plugins (pstack)](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop) |
