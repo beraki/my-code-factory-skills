@@ -53,9 +53,7 @@ Follow these steps for every task. Drop this file into a repo as `AGENTS.md`.
 
    A UI change requires a screenshot or a video on the PR. Use before-and-after when the proof is a page or element comparison.
 
-6. Greptile (greploop) and unslop still run. They do not grant permission to merge the pull request into main. Use greploop-apps when Greptile skips the PR for too many files. A clean Greptile review is not permission to merge the pull request into main.
-
-Run unslop on text a person will read before you commit or post it: commit messages, the PR title and body, docs, code comments, and the closing reply.
+6. Run unslop on text a person will read before you commit or post it: commit messages, the PR title and body, docs, code comments, and the closing reply.
 
 ## Skill sources
 
@@ -64,6 +62,4 @@ Run unslop on text a person will read before you commit or post it: commit messa
 | `new-feature` | this pack, written for Beraki's workflow |
 | `code-structure`, `evidence-driven-testing` | this pack, copied from [michaelshimeles/skills](https://github.com/michaelshimeles/skills) |
 | `before-and-after` | this pack, copied from michaelshimeles/skills, vendored from [vercel-labs/before-and-after](https://github.com/vercel-labs/before-and-after) |
-| `greploop` | this pack, copied from michaelshimeles/skills, vendored from [greptileai/skills](https://github.com/greptileai/skills) |
-| `greploop-apps` | this pack, copied from michaelshimeles/skills |
 | `unslop` | this pack, copied from michaelshimeles/skills, vendored from [cursor/plugins (pstack)](https://github.com/cursor/plugins/tree/main/pstack/skills/unslop) |

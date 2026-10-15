@@ -22,14 +22,6 @@ Actions own why and when. Services own how. Extract shared logic only after a se
 
 Records proof while testing. UI changes can be a video. Other changes use measured output. The recorder is `scripts/evidence.py`, and `tests/test_evidence.py` smoke-tests it.
 
-### [greploop](greploop/SKILL.md)
-
-Runs Greptile on a PR and works through the review comments. A clean review does not grant merge permission.
-
-### [greploop-apps](greploop-apps/SKILL.md)
-
-Same loop as greploop, for a PR Greptile skips because it changes too many files.
-
 ### [new-feature](new-feature/SKILL.md)
 
 Picks up the task, marks a Linear issue In Progress, and branches from the latest main. A worktree is only for non-blocking work other agents are doing in parallel.
@@ -40,7 +32,7 @@ Edits commit messages, PR text, docs, and other prose a person will read.
 
 ## Source
 
-This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, `greploop`, `greploop-apps`, and `unslop` are unchanged, including their licenses and scripts. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch and ship workflow.
+This pack adapts [michaelshimeles/skills](https://github.com/michaelshimeles/skills). `code-structure`, `evidence-driven-testing`, `before-and-after`, and `unslop` are unchanged, including their licenses and scripts. `new-feature`, `AGENTS.md`, and this README follow Beraki's branch and ship workflow.
 
 Every pull request uses `gh pr create --base main`. Never `--base integration`. There is no exception.
 

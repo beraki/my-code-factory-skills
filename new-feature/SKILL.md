@@ -58,4 +58,4 @@ description: Pick up a task, mark a Linear issue In Progress, and branch from th
 
    A UI change requires a screenshot or a video on the PR. Use before-and-after when the proof is a page or element comparison.
 
-6. Greptile (greploop) and unslop still run. They do not grant permission to merge the pull request into main. Use greploop-apps when Greptile skips the PR for too many files. A clean Greptile review is not permission to merge the pull request into main.
+6. Run unslop on text a person will read before you commit or post it: commit messages, the PR title and body, docs, code comments, and the closing reply.
