@@ -2,29 +2,34 @@
 
 This pack is the agent workflow for Beraki's product repos. Each folder is one skill, and `SKILL.md` is the file the agent loads. [`AGENTS.md`](AGENTS.md) is that same workflow in a form you can copy into a product repo.
 
-## Install
+## Install in a product repo
+
+From the product repo root:
 
 ```bash
-npx skills add beraki/my-code-factory-skills
-```
-
-That installs the skill folders. It does not copy `AGENTS.md` into the product repo. Do that step yourself.
-
-## Drop AGENTS.md into a product repo
-
-From the product repo root, save this pack's `AGENTS.md` as `AGENTS.md`:
-
-```bash
+npx skills add beraki/my-code-factory-skills -y
 curl -fsSL https://raw.githubusercontent.com/beraki/my-code-factory-skills/main/AGENTS.md -o AGENTS.md
 ```
 
-If you already have a checkout of this pack, copy the file instead:
+`npx skills add` installs the skill folders under `.agents/skills/` and writes `skills-lock.json` so the source stays `beraki/my-code-factory-skills`. Commit both. It does not copy `AGENTS.md`. The curl (or a local `cp`) does that.
+
+If you already have a checkout of this pack:
 
 ```bash
 cp /path/to/my-code-factory-skills/AGENTS.md ./AGENTS.md
 ```
 
-The agent reads that file when it works in the product repo. When this pack's workflow changes, replace the product repo's `AGENTS.md` with the new copy. Add that repo's check commands at the bottom of the copied file.
+The agent reads `AGENTS.md` in the product repo and loads the skill folders. When this pack changes, run `npx skills update -y` and replace `AGENTS.md` with a fresh copy. Add that repo's check commands at the bottom of the copied file.
+
+Product-specific branch or merge rules (for example an `integration` branch) live in the product Cursor Project preferences. They override this pack only where they conflict.
+
+### Commit checklist
+
+- [ ] `.agents/skills/` (six skills from this pack)
+- [ ] `skills-lock.json` (source pins to `beraki/my-code-factory-skills`)
+- [ ] `AGENTS.md` (copy of this pack, plus repo check commands at the bottom)
+
+Global install (`npx skills add beraki/my-code-factory-skills -g`) is fine for a personal machine. Product repos still need the project install and `AGENTS.md` so Cloud Agents pick up the same workflow.
 
 ## Workflow
 
